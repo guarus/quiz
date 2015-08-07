@@ -44,10 +44,15 @@ sequelize.sync().then(function() {
 	//success (...) ejecuta el manejador una vez creada la tabla
 	Quiz.count().success(function(count) {
 		if(count===0){ //la tabla se inicializa sólo si está vacía
-			return Quiz.create({
+			Quiz.create({
 						pregunta:  'Capital de Italia',
 						respuesta: 'Roma'
 					});
+			Quiz.create({
+						pregunta:  'Capital de Portugal',
+						respuesta: 'Lisboa'
+					});		
+					
 		}
 	 });  
 }).then(function() {
