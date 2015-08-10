@@ -1,3 +1,5 @@
 node_modules
 .DS_SDtore
 npm-debug.log
+quiz.sqlite
+.env
